@@ -1,0 +1,86 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+/*------ Fonts families ---------- */
+$Font-Exo: "Exo 2", sans-serif
+$Font-Plus: 'M PLUS 2', sans-serif
+$Font-Rale: 'Raleway', sans-serif
+
+/*------ Colors families ---------- */
+/* Colores Fondos */
+$bg-wine: #540b0e
+$bg-coffee: #582f0e
+$bg-blueblack: #222831
+$bg-bluegrey: #1b262c
+$bg-darkfucsia: #590d22
+$bg-fucsia: #900048
+$bg-white: #f5f6fa
+
+/* Colores Texto */
+$txt-coffee: #483434
+$txt-lightcoffee: #582f0e
+$txt-darkblue: #001219
+$txt-lightblue: #013a63
+$txt-white: #f8f9fa
+$txt-lightgrey: #dee2e6
+$txt-middlelightgrey: #e4e4e4
+$txt-middlegrey: #ced4da
+$txt-darkgrey: #343a40
+
+/* Colores Animaciones */
+$A-success: #55a630
+$A-alert: #ffb703
+$A-rederror: #d00000
+$A-fucsialight: #e41749
+$A-orange: #e85d04
+$A-lightcoffee: #7f5539
+$A-darkgrey: #495057
+
+/*-------- Font size -----------*/
+
+$Size-XXL: 40px
+$Size-XL: 32px
+$Size-L: 26px
+$Size-M: 20px
+$Size-S: 16px
+$Size-XS: 12px
+$Size-XXS: 10px
+
+/*------------- Animations ---------------*/
+$speed: 500ms 
+$speedBtn: 200ms
+$boxShadow: 0px 0px 6px 0px $A-darkgrey
+
+body
+    // overflow: hidden
+    font-family: $Font-Rale
+    color: $txt-darkblue
+
+p
+   font-family: $Font-Plus
+   color: $txt-lightblue
+
+a
+    text-decoration: none
+
+li
+    list-style: none
+
+.button
+    padding: 10px 8px
+    height: 40px
+    outline: none
+    border: none
+    font-family: $Font-Exo
+    font-weight: 600
+    cursor: pointer
+    transition: $speedBtn
+    
+
+@mixin btnStyle($bg, $box_shadow: none, $font: 16px) 
+    background-color: $bg
+    box-shadow: $box_shadow
+    font-size: $font
+
