@@ -1,0 +1,67 @@
+@import "./global"
+
+.notFound
+    width: 100%
+    padding: 15px
+
+    &__info
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 10px
+        align-items: center
+        margin: 20px 0px
+    &__title
+        color: $txt-coffee
+        font-family: $Font-Rale
+        font-size: $Size-XXL
+        grid-column: span 2
+        text-align: center
+    &__parrafo
+        font-size: $Size-S
+        font-weight: 400
+        text-align: justify
+    &__img
+        object-fit: cover
+        width: 100%
+        filter: drop-shadow(0px 0px 4px $bg-blueblack)
+
+@media only screen and (min-width: 728px)
+   .notFound
+        
+        &__info
+            grid-template-columns: 1fr 2fr
+            margin: 30px
+        &__title
+            grid-column: 2
+            text-align: center
+        &__parrafo
+            font-size: $Size-L
+            font-weight: 400
+            grid-column: 2
+            align-self: flex-start
+
+@media only screen and (min-width: 1024px)
+   .notFound
+        
+        &__info
+            grid-template-columns: 1fr 1fr
+            margin: 0px
+            margin-left: auto
+            margin-right: auto
+            width: 50%
+        &__title
+            grid-column: span 2
+            text-align: center
+            width: 100%
+        &__parrafo
+            font-size: $Size-L
+            font-weight: 400
+            width: 100%
+            grid-column: 2
+            align-self: center
+        &__img
+            width: 100%
+
+      
+            
+      

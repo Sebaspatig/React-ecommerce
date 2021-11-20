@@ -1,0 +1,44 @@
+@import "./global"
+
+/* ----------------large screen style------------------ */
+@media only screen and (min-width: 1024px) 
+    .product__Item
+        display: grid
+        justify-content: center
+        width: 260px
+        margin: 20px
+        padding: 10px
+        border-radius: 5px
+        box-shadow: $boxShadow
+        &:hover
+            transform: scale(1.02)
+            transition: all $speedBtn
+    
+    .product__Item__img 
+        width: 240px
+        height: 240px
+        border-radius: 5px
+        object-fit: cover
+    
+    .product__Item__info
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 12px
+    
+    .product__Item__cart 
+        width: 35px
+        height: 35px
+    
+    .info__content__prize 
+        font-weight: 600
+        font-size: $Size-M
+        margin-top: 0
+        margin-bottom: 4px
+    
+    .info__content__product 
+        font-size: $Size-S
+        margin-top: 0
+        margin-bottom: 0
+        color: $bg-blueblack
+    

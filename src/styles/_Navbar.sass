@@ -1,21 +1,70 @@
 @import "./global"
 
+// .menu__icon
+//     display: block
+
+// .navbar-left ul 
+//     display: none
+
+// .navbar-email 
+//     display: none
+
+/* ----------------large screen style------------------ */
+@media only screen and (min-width: 1024px) 
 .menu 
     display: flex
     justify-content: space-between
+    align-items: center
     padding: 0 24px
     border-bottom: 1px solid $txt-lightblue
+
+    &__item
+        width: max-content
+        margin-right: 10px
+        height: 100%
+        display: flex
+        align-items: center
+
 
 .menu__icon
     display: none
 
-.menu__list
+.menu__list, .submenu__list
     list-style: none
     padding: 0
     margin: 0
     display: flex
     align-items: center
     height: 60px
+
+
+.submenu
+    &__list
+        display: none
+        background: $txt-lightgrey
+        height: auto
+        transform: translateX(-10%)
+    
+    &__item
+        display: flex
+        align-items: center
+        height: 40px
+        padding: 5px 20px
+        &:hover, &:hover > .submenu__link
+            background: $txt-lightblue
+            transition: all $speedBtn
+            color: $txt-white
+            font-weight: 600    
+    
+    &__link
+        color: $txt-darkblue
+        font-weight: 600
+
+.menu__item:hover > .submenu__list
+    display: block
+    position: fixed
+    top: 60px
+    transition: all $speed
 
 .navbar-left 
     display: flex
@@ -63,15 +112,6 @@
       justify-content: center
       align-items: center
 
-    
-@media (max-width: 640px) 
-    .menu__icon
-        display: block
 
-    .navbar-left ul 
-        display: none
-
-    .navbar-email 
-        display: none
       
     
