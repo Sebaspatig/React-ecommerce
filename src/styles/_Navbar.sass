@@ -1,0 +1,77 @@
+@import "./global"
+
+.menu 
+    display: flex
+    justify-content: space-between
+    padding: 0 24px
+    border-bottom: 1px solid $txt-lightblue
+
+.menu__icon
+    display: none
+
+.menu__list
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    align-items: center
+    height: 60px
+
+.navbar-left 
+    display: flex
+
+.navbar-left ul 
+    margin-left: 12px
+
+.menu__link 
+    text-decoration: none
+    color: $txt-coffee
+    border: 1px solid $txt-white
+    padding: 8px
+    border-radius: 8px
+
+.menu__link:hover 
+    border: 1px solid $A-success
+    color: $A-success
+
+.menu__item__email
+    color: $txt-lightcoffee
+    font-size: $Size-M
+    margin-right: 12px
+
+.navbar-shopping-cart 
+    position: relative
+
+.menu__shoppingCar
+    font-size: $Size-XXL
+    color: $txt-lightblue
+    filter: drop-shadow(1px 1px 3px $bg-blueblack)
+    cursor: pointer
+
+.menu__item__count 
+      width: 20px
+      height: 20px
+      background-color: $A-orange
+      color: $txt-white
+      border-radius: 100%
+      font-size: $Size-S
+      font-weight: bold
+      position: absolute
+      top: 0px
+      right: -3px
+      display: flex
+      justify-content: center
+      align-items: center
+
+    
+@media (max-width: 640px) 
+    .menu__icon
+        display: block
+
+    .navbar-left ul 
+        display: none
+
+    .navbar-email 
+        display: none
+      
+    
