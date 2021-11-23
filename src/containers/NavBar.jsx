@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {CgMenuBoxed, CgShoppingCart} from 'react-icons/cg'
 import "../styles/_Navbar.sass"
 import NavItem from '../components/headerComponents/NavItem'
+import saleLogo from '@logos/logo_yard_sale.svg'
 
 export default function NavBar() {
     return (
@@ -13,7 +14,7 @@ export default function NavBar() {
             <div className="navbar-left">
 
                 <Link to="/" className="menu__logo__link">
-                    <img src={require('../../public/img/logos/logo_yard_sale.svg').default} alt="logo" className="menu__logo"/>
+                    <img src={saleLogo} alt="logo" className="menu__logo"/>
                 </Link>
             
             <NavItem/>

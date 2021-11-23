@@ -11,6 +11,13 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx'],
+        alias: {
+            '@components': path.resolve(__dirname, 'src/components/'),
+            '@containers': path.resolve(__dirname, 'src/containers/'),
+            '@logos': path.resolve(__dirname, 'src/assets/logos/'),
+            '@icons': path.resolve(__dirname, 'src/assets/icons/'),
+            '@images': path.resolve(__dirname, 'src/assets/imgs/')
+        }
     },
     mode: 'development',
     module: {
@@ -37,24 +44,10 @@ module.exports = {
                 ],
             },
             {
-                test: /\.svg$/,
-                use: [
-                  {
-                    loader: 'svg-url-loader',
-                    options: {
-                      limit: 10000,
-                    },
-                  },
-                ],
-            },
-            {
-                test: /\.(png|jpe?g|gif)$/i,
-                use: [
-                    {
-                    loader: 'file-loader',
-                    },
-                ],
-            },
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                type:'asset'
+            }
+
         ]
     },
     plugins: [
