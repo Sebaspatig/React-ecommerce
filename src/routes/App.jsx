@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from '../containers/Layout';
 import Login from '../containers/Login';
 import Home from '../pages/Home';
+import MyOrder from '../pages/MyOrder';
 import NotFound from '../pages/NotFound';
 import "../styles/global.sass"
 
@@ -13,8 +14,8 @@ const App = () => {
                 <Routes>
                     <Route path="/" caseSensitive={false} element={<Home />}/>
                     <Route path="/login" caseSensitive={false} element={<Login />} />
-			        <Route path="*" element={<NotFound />} />
-                            
+                    <Route path="/myOrder" caseSensitive={false} element={<MyOrder />} />
+			        <Route path="*" element={<NotFound />} />            
                 </Routes>    
             </Layout>
         </BrowserRouter>

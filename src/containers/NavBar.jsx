@@ -11,7 +11,10 @@ export default function NavBar() {
             <CgMenuBoxed className="menu__icon"/>
 
             <div className="navbar-left">
-            <img src={require('../../public/img/logos/logo_yard_sale.svg').default} alt="logo" className="menu__logo"/>
+
+                <Link to="/" className="menu__logo__link">
+                    <img src={require('../../public/img/logos/logo_yard_sale.svg').default} alt="logo" className="menu__logo"/>
+                </Link>
             
             <NavItem/>
             

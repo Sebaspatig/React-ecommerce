@@ -8,7 +8,7 @@ export default function NavList() {
             <Link className="menu__link" to="#">Hello, User</Link>
             <ul className="submenu__list">
                 <li className="submenu__item">
-                    <Link to="/" className="submenu__link">My orders</Link>
+                    <Link to="/myOrder" className="submenu__link">My orders</Link>
                 </li>
                 <li className="submenu__item">
                     <Link to="/" className="submenu__link">My account</Link>
@@ -19,7 +19,7 @@ export default function NavList() {
             </ul>
         </li>
         <li className="menu__item">
-            <Link className="menu__link" to="#">All</Link>
+            <Link className="menu__link" to="/">All</Link>
         </li>
         <li className="menu__item">
             <Link className="menu__link" to="#">Clothes</Link>
