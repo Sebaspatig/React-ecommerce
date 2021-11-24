@@ -8,13 +8,13 @@ export default function NavList() {
             <Link className="menu__link" to="#">Hello, User</Link>
             <ul className="submenu__list">
                 <li className="submenu__item">
-                    <Link to="/myOrder" className="submenu__link">My orders</Link>
+                    <Link to="#" className="submenu__link">My orders</Link>
                 </li>
                 <li className="submenu__item">
-                    <Link to="/" className="submenu__link">My account</Link>
+                    <Link to="#" className="submenu__link">My account</Link>
                 </li>
                 <li className="submenu__item">
-                    <Link to="/" className="submenu__link">Sign out</Link>
+                    <Link to="#" className="submenu__link">Sign out</Link>
                 </li>
             </ul>
         </li>

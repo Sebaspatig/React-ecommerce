@@ -11,12 +11,16 @@
 
 /* ----------------large screen style------------------ */
 @media only screen and (min-width: 1024px) 
-.menu 
+.menu
+    position: sticky
+    top: 0
     display: flex
     justify-content: space-between
     align-items: center
     padding: 0 24px
     border-bottom: 1px solid $txt-lightblue
+    background-color: $txt-white
+    z-index: 100
 
     &__item
         width: max-content
