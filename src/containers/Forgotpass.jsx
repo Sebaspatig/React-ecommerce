@@ -1,15 +1,15 @@
 import React from 'react'
-import "../styles/_login.sass"
+import "../styles/_forgotpass.sass"
 import saleLogo from '@logos/logo_yard_sale.svg'
 
-export default function Login() {
+export default function Forgotpass() {
     return (
         <div className="login">
             <div className="form-container">
                 <img src={saleLogo} alt="logo" className="logo"/>
                 
                 <h1 className="title">Create a new password</h1>
-                <p className="subtitle">Enter a new password for yue account</p>
+                <p className="subtitle">Enter a new password for your account</p>
 
                 <form action="/" className="form">
                     <label for="password" className="label">Password</label>
