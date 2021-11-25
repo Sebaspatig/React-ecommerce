@@ -11,7 +11,7 @@ export default function NavList() {
     return (
         <React.Fragment>
         <li className="menu__item">
-            <Link className="menu__link" to="#" onClick={()=>setTogglesubMenu(!togglesubMenu)}>Hello, User</Link>
+            <Link className="menu__link" to="#" onClick={()=>setTogglesubMenu(!togglesubMenu)}>Hello, {item.username}</Link>
             <ul className={`submenu__list  ${togglesubMenu ? "show__submenu" : ""}`}>
                 <li className="submenu__item">
                     <Link to="#" className="submenu__link">My orders</Link>
@@ -24,7 +24,7 @@ export default function NavList() {
                     
                     <Link to="/login" className="submenu__link">Log in</Link>
                     : 
-                    <Link to="/" className="submenu__link" onClick={()=> saveItem([])}>Sign out</Link>
+                    <Link to="/" className="submenu__link" onClick={()=> saveItem({username:"", login:false})}>Sign out</Link>
                     }
                 </li>
             </ul>
