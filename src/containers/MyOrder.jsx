@@ -45,7 +45,7 @@ export default function MyOrder() {
                     </div>
 
                 </div>
-                <button class="button myOrder__checkout">
+                <button className="button myOrder__checkout">
                     Checkout
                 </button>
             </div>

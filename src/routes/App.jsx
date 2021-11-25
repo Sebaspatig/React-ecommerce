@@ -9,12 +9,16 @@ import NotFound from '../pages/NotFound';
 import "../styles/global.sass"
 import AppContext from '../context/AppContext';
 import useinitialState from '../hooks/useinitialState';
+import useLocalStorage from '../hooks/useLocalStorage';
 
 
 const App = () => {
-    const initialState = useinitialState();
+    const {state, addToCart, removeFromCart} = useinitialState();
+    const { item, saveItem } = useLocalStorage("LOGIN", {username:"username@example.com", login:false});
+    
     return (
-        <AppContext.Provider value = {initialState}>
+        <AppContext.Provider value={{state, addToCart, removeFromCart, item, saveItem}}>
+        
         <BrowserRouter>
             <Layout>
                 <Routes>

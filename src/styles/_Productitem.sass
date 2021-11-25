@@ -1,7 +1,40 @@
 @import "./global"
 
+.product__Item
+    display: grid
+    justify-content: center
+    text-align: center
+    width: 90%
+    margin: 20px
+    padding: 10px
+    border-radius: 5px
+    box-shadow: $boxShadow
+    &:hover
+        transform: scale(1.02)
+        transition: all $speedBtn
+
+    &__img
+        width: 95%
+        object-fit: cover
+        justify-self: center
+    
+    &__info
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 12px
+
+.info__content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    text-align: start
+    margin-left: 20px
+    font-family: $Font-Exo
+    font-weight: 600
+
 /* ----------------large screen style------------------ */
-@media only screen and (min-width: 1024px) 
+@media only screen and (min-width: 728px) 
     .product__Item
         display: grid
         justify-content: center

@@ -8,32 +8,32 @@ import AppContext from '../context/AppContext'
 import MyOrder from './MyOrder'
 
 export default function NavBar() {
-    const {state} = useContext(AppContext)
+    const {state, item} = useContext(AppContext)
     const [toggleCart, setToggleCart]= useState(false)
+    const [toggleMenu, setToggleMenu]= useState(false)
 
     return (
         <nav className="menu" >
             
-            <CgMenuBoxed className="menu__icon"/>
+            <CgMenuBoxed className="menu__icon" onClick={()=>setToggleMenu(!toggleMenu)}/>
 
             <div className="navbar-left">
 
                 <Link to="/" className="menu__logo__link">
                     <img src={saleLogo} alt="logo" className="menu__logo"/>
                 </Link>
-            
-            <NavItem/>
+
+                <NavItem showMenu={toggleMenu} />
+                
             
             </div>
 
             <div className="navbar-right">
-            <ul className="menu__list">
-                <li className="menu__item menu__item__email">yardsale@example.com</li>
-                <li className="menu__item navbar-shopping-cart" onClick={()=> setToggleCart(!toggleCart)} >
+                <div className="menu__item menu__item__email">{item.username}</div>
+                <div className="navbar-shopping-cart" onClick={()=> setToggleCart(!toggleCart)} >
                     <CgShoppingCart className="menu__shoppingCar"/>
                     {state.cart.length > 0 ? <div className="menu__item__count">{state.cart.length}</div>:null}
-                </li>
-            </ul>
+                </div>
             </div>
 
             {toggleCart ? <MyOrder/> : null}

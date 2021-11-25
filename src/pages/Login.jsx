@@ -1,19 +1,29 @@
-import React, {useRef} from 'react'
+import React, {useContext, useRef} from 'react'
 import logo from "@logos/logo_yard_sale.svg"
 import "../styles/_login.sass"
 import { Link } from 'react-router-dom'
+import AppContext from '../context/AppContext'
+import {useNavigate} from 'react-router-dom';
+
 
 export default function Login() {
     const form = useRef(null)
+    const { saveItem } = useContext(AppContext)
+    const navigate = useNavigate();
+
 
     const handleSubmit = (e) =>{
         e.preventDefault();
         const formData = new FormData(form.current);
         const data = {
             username: formData.get('email'),
-            password: formData.get('password')
+            login: true
         }
         console.log(data)
+        return (
+            saveItem(data),
+            navigate('/')
+        )
     }
 
     return (
